@@ -34,16 +34,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
+            <a class="nav-link" href="<?php echo base_url();?>Pages/shop">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="<?php echo base_url();?>Pages/dashboard">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Customer Info</a>
+            <a class="nav-link" href="<?php echo base_url();?>Pages/customerInfo">Customer Info</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sale Report</a>
+            <a class="nav-link" href="<?php echo base_url();?>Pages/saleReport">Sale Report</a>
           </li>
       </div>
     </nav>

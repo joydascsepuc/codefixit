@@ -11,6 +11,30 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function shop(){
+		$this->load->view('templates/header');
+		$this->load->view('pages/website/shop');
+		$this->load->view('templates/footer');
+	}
+
+	public function dashboard(){
+		$this->load->view('templates/header');
+		$this->load->view('pages/website/dashboard');
+		$this->load->view('templates/footer');	
+	}
+
+	public function customerInfo(){
+		$this->load->view('templates/header');
+		$this->load->view('pages/website/customerInfo');
+		$this->load->view('templates/footer');
+	}
+
+	public function saleReport(){
+		$this->load->view('templates/header');
+		$this->load->view('pages/website/saleReport');
+		$this->load->view('templates/footer');
+	}
+
 }
 
 /* End of file pages.php */
