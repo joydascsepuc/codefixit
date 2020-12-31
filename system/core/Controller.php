@@ -88,11 +88,11 @@ class CI_Controller {
 		/*---------------------------------------*/
 		/*Starting of User Permission Controller*/
 		/*-------------------------------------*/
-		$user_id = $this->session->userdata('user_id');
+		/*$user_id = $this->session->userdata('user_id');
 		$this->load->model('Model_Groups');
 		$group_data = $this->Model_Groups->getUserGroupByUserId($user_id);
 		$this->data['user_permission'] = unserialize($group_data['permission']); //for view
-		$this->permission = unserialize($group_data['permission']); //for controller
+		$this->permission = unserialize($group_data['permission']); *///for controller
 		/*-------------------------------------*/
 		/*Ending of User Permission Controller*/
 		/*-----------------------------------*/
