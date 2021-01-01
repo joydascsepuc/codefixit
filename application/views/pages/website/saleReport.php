@@ -11,54 +11,18 @@
 	    </tr>
 	  </thead>
 	  <tbody>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Batman</td>
-	      <td>Gun</td>
-	      <td>Sell</td>
-	      <td>1500</td>
-	      <td>2020/05/04</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Batman</td>
-	      <td>Gun</td>
-	      <td>Sell</td>
-	      <td>1500</td>
-	      <td>2020/05/04</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Batman</td>
-	      <td>Gun</td>
-	      <td>Sell</td>
-	      <td>1500</td>
-	      <td>2020/05/04</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Batman</td>
-	      <td>Gun</td>
-	      <td>Sell</td>
-	      <td>1500</td>
-	      <td>2020/05/04</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Batman</td>
-	      <td>Gun</td>
-	      <td>Sell</td>
-	      <td>1500</td>
-	      <td>2020/05/04</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Batman</td>
-	      <td>Gun</td>
-	      <td>Sell</td>
-	      <td>1500</td>
-	      <td>2020/05/04</td>
-	    </tr>
+	  	<?php $i=1;?>
+	  	<?php foreach($data as $datum):?>
+		    <tr>
+		      <th><?=$i;?></th>
+		      <td><?=$datum['customer_id']?></td>
+		      <td><?=$datum['product_id']?></td>
+		      <td><?=$datum['report']?></td>
+		      <td><?=$datum['product_price']?></td>
+		      <td><?=$datum['created_at']?></td>
+		    </tr>
+		<?php $i++;?>
+		<?php endforeach;?>
 	  </tbody>
 	</table>
 </div>

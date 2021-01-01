@@ -10,7 +10,8 @@ class Action extends CI_Controller {
 
 	public function customerInfo(){
 		$data['customers'] = $this->Model_Action->getCustomers();
-		$data['data'] = $this->Model_Action->getCustomerInfo();
+		$data['sales'] = $this->Model_Action->getCustomerInfo();
+		$data['purchases'] = $this->Model_Action->getCustomerInfo1();
 		$this->load->view('templates/header');
 		$this->load->view('pages/website/customerInfo',$data);
 		$this->load->view('templates/footer');

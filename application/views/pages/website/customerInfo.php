@@ -24,15 +24,36 @@
 	      <th scope="col">Date</th>
 	    </tr>
 	  </thead>
-	  <tbody>
-	    <tr>
-	      <th scope="row">1</th>
-	      <td>Batman</td>
-	      <td>Gun</td>
-	      <td>Sell</td>
-	      <td>1500</td>
-	      <td>2020/05/04</td>
-	    </tr>
-	  </tbody>
+	  <?php if($sales != NULL):?>
+		  <tbody>
+		  	<?php $i = 1;?>
+		  	<?php foreach($sales as $sale):?>
+			    <tr>
+			      <th><?=$i;?></th>
+			      <td><?=$sale['customer_id'];?></td>
+			      <td><?=$sale['product_id'];?></td>
+			      <td>Sell</td>
+			      <td><?=$sale['product_price']?></td>
+			      <td><?=$sale['created_at'];?></td>
+			    </tr>
+			<?php $i++;?>
+			<?php endforeach;?>
+		  </tbody>
+	  <?php endif;?>
+	  <?php if($purchases != NULL):?>
+		  <tbody>
+		  	<?php foreach($purchases as $purchase):?>
+			    <tr>
+			      <th><?=$i;?></th>
+			      <td><?=$purchase['customer_id'];?></td>
+			      <td><?=$purchase['product_id'];?></td>
+			      <td>Purchased</td>
+			      <td><?=$purchase['product_price']?></td>
+			      <td><?=$purchase['created_at'];?></td>
+			    </tr>
+			<?php $i++;?>
+			<?php endforeach;?>
+		  </tbody>
+	  <?php endif;?>
 	</table>
 </div>

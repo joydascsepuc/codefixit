@@ -21,13 +21,18 @@ class Pages extends CI_Controller {
 	}
 
 	public function dashboard(){
+		$data['sales'] = $this->Model_Action->getSalesReport();
+		$data['purchases'] = $this->Model_Action->getPuchasesReport();
+
 		$this->load->view('templates/header');
-		$this->load->view('pages/website/dashboard');
+		$this->load->view('pages/website/dashboard',$data);
 		$this->load->view('templates/footer');	
 	}
 
 	public function customerInfo(){
 		$data['customers'] = $this->Model_Action->getCustomers();
+		$data['sales'] = NULL;
+		$data['purchases'] = NULL;
 
 		$this->load->view('templates/header');
 		$this->load->view('pages/website/customerInfo',$data);
@@ -35,8 +40,13 @@ class Pages extends CI_Controller {
 	}
 
 	public function saleReport(){
+		$sale = $this->Model_Action->getsale();
+		$purchase = $this->Model_Action->getpurchase();
+
+		$data['data'] = $sale + $purchase;
+
 		$this->load->view('templates/header');
-		$this->load->view('pages/website/saleReport');
+		$this->load->view('pages/website/saleReport',$data);
 		$this->load->view('templates/footer');
 	}
 
