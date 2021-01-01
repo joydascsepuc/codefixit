@@ -12,8 +12,11 @@ class Pages extends CI_Controller {
 	}
 
 	public function shop(){
+		$data['customers'] = $this->Model_Action->getCustomers();
+		$data['products'] = $this->Model_Action->getProducts();
+
 		$this->load->view('templates/header');
-		$this->load->view('pages/website/shop');
+		$this->load->view('pages/website/shop',$data);
 		$this->load->view('templates/footer');
 	}
 
@@ -24,8 +27,10 @@ class Pages extends CI_Controller {
 	}
 
 	public function customerInfo(){
+		$data['customers'] = $this->Model_Action->getCustomers();
+
 		$this->load->view('templates/header');
-		$this->load->view('pages/website/customerInfo');
+		$this->load->view('pages/website/customerInfo',$data);
 		$this->load->view('templates/footer');
 	}
 

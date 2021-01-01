@@ -1,10 +1,11 @@
 <div class="container">
 	<?php echo form_open('Action/customerInfo');?>
 		<div class="form-group col-md-4">
-	      <label for="inputState">Customer Name</label>
-	      <select id="inputState" class="form-control">
-	        <option selected>Batman</option>
-	        <option>Superman</option>
+	      <label for="customerName">Customer Name</label>
+	      <select id="customerName" class="form-control" name="customerName" required>
+		    <?php foreach($customers as $customer):?>
+	        	<option value="<?=$customer['id']?>"><?=$customer['name']?></option>
+	    	<?php endforeach;?>
 	      </select>
 	    </div>
 	    <div class="form-group col-md-4">
